@@ -14,6 +14,7 @@ public class TestRestController {
     @RequestMapping(value = "/test/{orderId}", method = RequestMethod.GET, produces = "application/json")
     public String getOrder(@PathVariable("orderId") Integer orderId) {
     	System.out.println("get orderId: " + orderId);
+    	
     	Order o = new Order();
     	o.setId(orderId);
     	o.setName("test");
